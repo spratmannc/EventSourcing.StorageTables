@@ -2,7 +2,7 @@
 using EventSourcing.Persistence;
 using System;
 
-namespace EventSourcing.StorageTables
+namespace EventSourcing
 {
     class Program
     {

@@ -10,11 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EventSourcing.Persistence\EventSourcing.Persistence.csproj" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <ProjectReference Include="..\EventSourcing.Persistence.TableStorage\EventSourcing.Persistence.TableStorage.csproj" />
   </ItemGroup>
 
 </Project>
