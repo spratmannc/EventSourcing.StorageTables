@@ -25,7 +25,7 @@ namespace EventSourcing.TableStorage
             var query = new TableQuery()
                             .Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, id))
                             .OrderBy("Timestamp");
-
+            
             var history = table.ExecuteQuery(query, PersonEventResolver)
                                .Select(item => item.ToEvent());
 
@@ -77,15 +77,12 @@ namespace EventSourcing.TableStorage
             _ => default
         };
 
-        private static Type ConvertNameToEntityType(string type)
+        private static Type ConvertNameToEntityType(string type) => type switch
         {
-            return type switch
-            {
-                nameof(BirthDateChangedEntity) => typeof(BirthDateChangedEntity),
-                nameof(NameChangedEntity) => typeof(NameChangedEntity),
-                nameof(CreatedEntity) => typeof(CreatedEntity),
-                _ => default
-            };
-        }
+            nameof(BirthDateChangedEntity) => typeof(BirthDateChangedEntity),
+            nameof(NameChangedEntity) => typeof(NameChangedEntity),
+            nameof(CreatedEntity) => typeof(CreatedEntity),
+            _ => default
+        };
     }
 }
