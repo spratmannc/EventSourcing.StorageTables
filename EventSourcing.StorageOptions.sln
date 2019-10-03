@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing.TableStorage"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing", "EventSourcing\EventSourcing.csproj", "{0CF4BA0F-DA8A-4D18-8510-2335EFEC6718}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSourcing.MongoDbStorage", "EventSourcing.MongoDbStorage\EventSourcing.MongoDbStorage.csproj", "{FEEC82A7-DA0A-4253-B6D8-85FD5823719B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0CF4BA0F-DA8A-4D18-8510-2335EFEC6718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF4BA0F-DA8A-4D18-8510-2335EFEC6718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF4BA0F-DA8A-4D18-8510-2335EFEC6718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEEC82A7-DA0A-4253-B6D8-85FD5823719B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEEC82A7-DA0A-4253-B6D8-85FD5823719B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEEC82A7-DA0A-4253-B6D8-85FD5823719B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEEC82A7-DA0A-4253-B6D8-85FD5823719B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

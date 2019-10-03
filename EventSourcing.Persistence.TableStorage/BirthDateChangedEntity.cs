@@ -1,7 +1,7 @@
-﻿using System;
-using EventSourcing.Core.Domain;
+﻿using EventSourcing.Core.Domain;
 using EventSourcing.Core.Events;
 using Microsoft.Azure.Cosmos.Table;
+using System;
 
 namespace EventSourcing.TableStorage
 {

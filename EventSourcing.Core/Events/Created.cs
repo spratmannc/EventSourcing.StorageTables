@@ -1,19 +1,19 @@
 ﻿using EventSourcing.Core.Domain;
-using System;
 
 namespace EventSourcing.Core.Events
 {
-    public class Created : PersonEventBase
+    public class Created : IEvent<Person>
     {
         public Created(string personId)
         {
             PersonId = personId;
         }
 
-        public override void Apply(Person person)
+        public string PersonId { get; private set; }
+
+        public void Apply(Person person)
         {
             person.Id = PersonId;
-            base.Apply(person);
         }
     }
 }
