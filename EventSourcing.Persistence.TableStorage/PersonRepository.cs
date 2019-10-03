@@ -64,7 +64,7 @@ namespace EventSourcing.TableStorage
             evnt.RowKey = rowKey;
             evnt.Timestamp = timeStamp;
             evnt.ETag = etag;
-            evnt?.ReadEntity(props, null);
+            evnt.ReadEntity(props, null);
 
             return evnt as IEventEntity<Person>;
         }
