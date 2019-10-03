@@ -2,7 +2,7 @@
 
 namespace EventSourcing.Core.Events
 {
-    public class NameChanged : IEvent<Person>
+    public class NameChanged : PersonEventBase
     {
         public NameChanged(string first, string last)
         {
@@ -10,13 +10,14 @@ namespace EventSourcing.Core.Events
             Last = last;
         }
 
-        public string First { get; set; }
-        public string Last { get; set; }
+        public string First { get; private set; }
+        public string Last { get; private set; }
 
-        public void Apply(Person person)
+        public override void Apply(Person person)
         {
             person.FirstName = First;
             person.LastName = Last;
+            base.Apply(person);
         }
     }
 }

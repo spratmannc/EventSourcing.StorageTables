@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EventSourcing.Persistence.TableStorage\EventSourcing.Persistence.TableStorage.csproj" />
+    <ProjectReference Include="..\EventSourcing.Persistence.TableStorage\EventSourcing.TableStorage.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using EventSourcing.Core.Domain;
 using EventSourcing.Core.Events;
 using Microsoft.Azure.Cosmos.Table;
 
-namespace EventSourcing.Persistence
+namespace EventSourcing.TableStorage
 {
     internal class BirthDateChangedEntity : TableEntity, IEventEntity<Person>
     {

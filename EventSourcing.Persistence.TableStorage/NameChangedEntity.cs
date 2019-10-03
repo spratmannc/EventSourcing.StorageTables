@@ -2,7 +2,7 @@
 using EventSourcing.Core.Events;
 using Microsoft.Azure.Cosmos.Table;
 
-namespace EventSourcing.Persistence
+namespace EventSourcing.TableStorage
 {
     internal class NameChangedEntity : TableEntity, IEventEntity<Person>
     {

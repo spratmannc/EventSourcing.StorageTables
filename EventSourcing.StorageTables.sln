@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing.Core", "EventSourcing.Core\EventSourcing.Core.csproj", "{BE0DFD83-F532-4E3D-9C76-D6772FA4E7E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing.Persistence.TableStorage", "EventSourcing.Persistence.TableStorage\EventSourcing.Persistence.TableStorage.csproj", "{C31F827E-615F-45CD-B9DD-1B10CB677745}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing.TableStorage", "EventSourcing.Persistence.TableStorage\EventSourcing.TableStorage.csproj", "{C31F827E-615F-45CD-B9DD-1B10CB677745}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing", "EventSourcing\EventSourcing.csproj", "{0CF4BA0F-DA8A-4D18-8510-2335EFEC6718}"
 EndProject

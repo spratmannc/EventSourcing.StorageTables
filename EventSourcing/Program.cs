@@ -1,5 +1,5 @@
 ﻿using EventSourcing.Core.Domain;
-using EventSourcing.Persistence;
+using EventSourcing.Core.Repositories;
 using System;
 
 namespace EventSourcing
@@ -8,14 +8,13 @@ namespace EventSourcing
     {
         static void Main(string[] args)
         {
-            string CONNECTION_STRING = Environment.GetEnvironmentVariable("StorageConnection");
-
             // create a person
             Person person = new Person();
             person.SetName("The", "Person");
             person.SetDOB(DateTimeOffset.Now.AddYears(-12));
 
-            var repository = new PersonRepository(CONNECTION_STRING);
+            // un-comment the line for the type of repository you would like
+            IRepository<Person> repository = GetTableStorageRepository();
 
             // save it
             repository.Save(person);
@@ -23,9 +22,15 @@ namespace EventSourcing
             // get it back
             person = repository.Find(person.Id);
 
+            // write something to the screen
             Console.WriteLine($"{person.Id} => {person.FirstName} {person.LastName} born on {person.DateOfBirth.ToString("d")}");
-
             Console.ReadLine();
+        }
+
+        static IRepository<Person> GetTableStorageRepository()
+        {
+            string storageConnectionString = Environment.GetEnvironmentVariable("StorageConnection");
+            return new TableStorage.PersonRepository(storageConnectionString);
         }
     }
 }
