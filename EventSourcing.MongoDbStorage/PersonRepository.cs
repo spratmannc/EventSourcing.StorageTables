@@ -56,6 +56,8 @@ namespace EventSourcing.MongoDbStorage
             }
 
             people.InsertMany(events);
+
+            person.Checkpoint();
         }
 
         private PersonEventBase Convert(IEvent<Person> e) => e switch

@@ -49,6 +49,8 @@ namespace EventSourcing.TableStorage
             }
 
             table.ExecuteBatchAsync(batch).Wait();
+
+            person.Checkpoint();
         }
 
         private static IEventEntity<Person> PersonEventResolver(string partitionKey, string rowKey, DateTimeOffset timeStamp, IDictionary<string, EntityProperty> props, string etag)
